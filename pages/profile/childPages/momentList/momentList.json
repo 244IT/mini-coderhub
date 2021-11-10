@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "chh-moment-list": "/components/chh-moment-list"
+  },
+  "navigationBarTitleText": "我的点赞",
+  "enablePullDownRefresh": true
+}

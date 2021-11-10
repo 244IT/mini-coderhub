@@ -1,0 +1,101 @@
+function filterCreateTime(time) {
+  time = _utc2beijing(time)
+  return getTime(time)
+}
+
+function filterIndexTime(time) {
+  if(!time) return '刚刚'
+  if(time.indexOf('T')) {
+    time = _utc2beijing(time)/1000
+  }else {
+    time = getDate().getTime()/1000
+  }
+  time = filterTimeDiffer(time)
+  return time
+}
+/* 获取当前时间 */
+function getTime(timestamp) {
+  var today = getDate(timestamp)
+  var year = today.getFullYear()
+  var month = formatNumber(today.getMonth() + 1)
+  var date = formatNumber(today.getDate())
+  var day = formatNumber(today.getHours())
+  var minutes = formatNumber(today.getMinutes())
+  var hours = formatNumber(today.getSeconds())
+  return year + '-' + month + '-' + date + ' ' + day + ':' + minutes + ':' + hours
+}
+
+/* 获取时间差 xx年/月/日/时/分/秒前 */
+/**
+ * 获取时间差 1611985833 -> 20天
+ * @param {String} timestamp 时间搓（10位）
+ * @return {String} 过滤后的时间
+ * @author chh
+ */
+function filterTimeDiffer(timestamp) {
+  var date = getDate()
+  // 时间搓差值
+  timeDiffer = getInt(date.getTime()/1000) - timestamp
+  if(timeDiffer < 60) return '刚刚'
+  var timeInfo = [
+      { multiple: 1, suffix: '秒前' },
+      { multiple: 60, suffix: '分钟前' },
+      { multiple: 60, suffix: '小时前' },
+      { multiple: 24, suffix: '天前' },
+      { multiple: 30, suffix: '月前' },
+      { multiple: 12, suffix: '年前' },
+  ]
+  timeInfo.reduce(function(pre, next) {
+      next.multiple *= pre.multiple
+      next.time = getInt(timeDiffer / next.multiple)
+      return next
+  })
+  timeInfo = timeInfo.filter(function(item){ return item.time !== '0' }).reverse()
+  return timeInfo[0].time + timeInfo[0].suffix
+}
+
+/* 过滤图片 */
+function filterImg(img) {
+  return img ? img + '?' + Math.random() : ''
+}
+
+/* 国际标准时间转北京时间 */
+function _utc2beijing(utc_datetime) {
+  if(!utc_datetime) return ''
+  // 转为正常的时间格式 年-月-日 时:分:秒
+  var T_pos = utc_datetime.indexOf('T');
+  var Z_pos = utc_datetime.indexOf('Z');
+  var year_month_day = utc_datetime.slice(0,T_pos);
+  var hour_minute_second = utc_datetime.slice(T_pos+1, -1);
+  var new_datetime = year_month_day+" "+hour_minute_second; // 2017-03-31 08:02:06
+
+  // 处理成为时间戳
+  timestamp = getDate(Date.parse(new_datetime));
+  timestamp = timestamp.getTime();
+  timestamp = timestamp/1000;
+
+  // 增加8个小时，北京时间比utc时间多八个时区
+  var timestamp = timestamp+8*60*60;
+
+  // 时间戳转为时间
+  var beijing_datetime = getDate(parseInt(timestamp) * 1000).getTime()
+  return beijing_datetime; // 2017-03-31 16:02:06
+}
+
+/* --------------------------------------------------------工具wxs函数------------------------------------------------- */
+/* 时间补0 */
+function formatNumber(n){
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+/* 取整 */
+function getInt(num) {
+  return num ? num.toString().split('.')[0] : ''
+}
+
+module.exports = {
+  filterCreateTime: filterCreateTime,
+  filterImg: filterImg,
+  filterIndexTime: filterIndexTime
+}

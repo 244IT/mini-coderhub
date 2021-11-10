@@ -1,0 +1,19 @@
+/* pages/index/childCpns/c-edit/index.wxss */
+@import '/styles/iconfont.wxss';
+/* --------------------------发布按钮----------------------------- */
+.edit{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 30rpx;
+  bottom: 30rpx;
+  height: 100rpx;
+  width: 100rpx;
+  background-color: #0180FF;
+  border-radius: 50%;
+}
+.icon-edit{
+  font-size: 50rpx;
+  color: #FFF;
+}

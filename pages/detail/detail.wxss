@@ -1,0 +1,371 @@
+@import '/styles/iconfont.wxss';
+/* -----------------------头部------------------------ */
+.header{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid hsla(0,0%,59.2%,.2);
+  background-color: #FFF;
+}
+.logo-img{
+  height: 76rpx;
+  width: 90rpx;
+}
+
+.title{
+  margin: 0 30rpx;
+  color: #007fff;
+}
+.search-input{
+  width: 500rpx;
+  height: 80rpx;
+  padding: 0 20rpx 0 70rpx;
+  border-bottom: 1rpx solid rgba(178, 186, 194, 0.1);
+  background-color: #EDEDED;
+  border-radius: 8rpx;
+}
+
+.icon-search{
+  position: absolute;
+  left: 50rpx;
+  font-size: 38rpx;
+  color: #666;
+}
+
+.icon-set{
+  margin: 0 10rpx 0 20rpx;
+  font-size: 46rpx;
+  color: #A9B6BD;
+}
+
+.tag{
+  display: flex;
+  align-items: center;
+  color: #A9B6BD;
+}
+
+.tag text:last-child{
+  white-space: nowrap;
+}
+
+.label, .list-label{
+  display: flex;
+  align-items: center;
+  height: 92rpx;
+  padding: 0 30rpx;
+  background-color: #FFF;
+}
+
+.label-item, .list-label-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24rpx;
+  color: #71777c;
+}
+
+.active{
+  color: #007fff;
+}
+
+.user-logo{
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 20rpx;
+  border-radius: 50%;
+}
+
+/* 图片列表 */
+.img-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200rpx;
+  width: 200rpx;
+  margin: 0 20rpx 20rpx 0;
+  border: 1rpx dotted #ccc;
+  border-radius: 20rpx;
+}
+.img-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+}
+
+/* ------------------------- 内容---------------------------- */
+.content{
+  position: relative;
+  padding: 48rpx;
+  /* margin-bottom: 100rpx; */
+  border-bottom: 1px solid hsla(0,0%,59.2%,.2);
+}
+
+.avalar-img{
+  height: 80rpx;
+  width: 80rpx;
+  margin-right: 24rpx;
+  border-radius: 50%;
+}
+.user-info{
+  display: flex;
+}
+.username{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.level-img{
+  width: 46rpx;
+  height: 28rpx;
+  margin-left: 18rpx;
+}
+.article-info{
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  color: #909090;
+}
+.article-info text{
+  margin-right: 20rpx;
+}
+.follow{
+  position: absolute;
+  top: 80rpx;
+  right: 50rpx;
+  line-height: 52rpx;
+  width: 110rpx;
+  border: 1rpx solid #6cbd45;
+  color: #6cbd45;
+  border-radius: 4rpx;
+  text-align: center;
+}
+.article-title{
+  margin: 32rpx 0;
+  font-size: 48rpx;
+  color: #333;
+}
+
+.article-detail{
+  color: #333;
+}
+
+/* ------------------------------评论------------------------------ */
+.comment{
+  margin-bottom: 100rpx;
+}
+.comment-item{
+  padding: 40rpx;
+}
+.reply-user-img{
+  height: 64rpx;
+  width: 64rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.comment-item{
+  display: flex;
+}
+.comment-item:not(:last-child) {
+  border-bottom: 1rpx solid rgba(178, 186, 194, 0.1);
+}
+.comment-item-right{
+  flex: 1;
+}
+.comment-favor{
+  margin: 0 20rpx 0 10rpx;
+  color: #8a93a0;
+}
+.right-top{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.right-top text:first-child{
+  flex: 1;
+}
+
+.right-top .iconfont{
+  color: #8a93a0;
+}
+.reply-username{
+  font-size: 38rpx;
+  color: #406599;
+}
+.reply-time{
+  color: #8a9aa9;
+}
+.reply-content{
+  padding: 20rpx 0;
+  line-height: 48rpx;
+  color: #333;
+}
+.more-reply{
+  padding: 24rpx;
+  background-color: #F4F5F5;
+}
+.more-reply-item{
+  padding: 8rpx 0;
+}
+.more-reply-user{
+  color: #406599;
+}
+/* 空 */
+.empty{
+  display: flex;
+  flex-direction: column;
+  padding: 150rpx 0rpx;
+  align-items: center;
+  color: #9F9F9F;
+}
+.empty-img{
+  width: 200rpx;
+  height: 108rpx;
+  margin-bottom: 30rpx;
+}
+
+
+/* -------------------------------底部评论--------------------------------- */
+.bottom-comment-input{
+  color: #333!important;
+}
+.bottom-comment{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100rpx;
+  width: 100%;
+  padding: 0 20rpx;
+  border-top: 1rpx solid rgba(178, 186, 194, 0.1);
+  background-color: #FFF;
+  box-sizing: border-box;
+}
+
+.bottom-comment-favor .iconfont{
+  margin: 0 10rpx 0 0rpx;
+}
+.bottom-comment-favor{
+  color: #8a93a0;
+}
+
+.bottom-comment input{
+  height: 60rpx;
+  width: 400rpx;
+  padding: 0 20rpx;
+  color: #BEBEBE;
+  background-color: #EDEDED;
+  border-radius: 30rpx;
+}
+
+.bottom-comment-collect{
+  color: #8a93a0;
+}
+/* -------------------------底部收藏夹------------------------ */
+/* 遮罩层 */
+.collect-mark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9;
+}
+
+.collect-wrap{
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 20rpx;
+  background-color: #FFF;
+  border-radius: 24rpx 24rpx 0 0;
+  overflow: hidden;
+  transition: all ease-in 0.2s;
+  transform: translateY(100%);
+}
+
+
+.collect-title{
+  position: relative;
+  display: flex;
+  line-height: 95rpx;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #edeeef;
+  background-color: #FFF;
+}
+.collect-title text:last-child{
+  color: #007fff;
+}
+
+.collect-item{
+  border-bottom: 1rpx solid rgba(178, 186, 194, 0.1);
+  padding: 20rpx 0;
+}
+
+.collection-info{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #8a93a0;
+}
+
+/* --------------------------模态框------------------------ */
+.dialog{
+  line-height: 100rpx;
+  padding: 20rpx;
+  text-align: center;
+}
+/* 模态框按钮 */
+.btn-wrap{
+  display: flex;
+}
+
+.status-dialog{
+  position: relative;
+  padding: 40rpx 20rpx;
+  text-align: center;
+  font-family: PingFang;
+}
+
+.dialog-title{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #040000;
+}
+
+.dialog-tip{
+  margin: 40rpx 0;
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #EF3E34;
+}
+
+.status-dialog input{
+  height: 80rpx;
+  margin: 30rpx 0;
+  border: 1rpx solid #E5E5E5;
+  border-radius: 10rpx;
+}
+
+.dialog-btn{
+  margin-top: 40rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  font-family: PingFang;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #1E8FF6;
+  text-align: center;
+  border-radius: 8rpx;
+}
+
+.icon-guanbi{
+  position: absolute;
+  right: 30rpx;
+  top: 50rpx;
+}

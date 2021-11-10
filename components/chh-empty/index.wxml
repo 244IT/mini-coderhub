@@ -1,0 +1,5 @@
+<!-- 无优惠券占位组件： @author: chh -->
+<view class="empty">
+  <image class="empty-img" src="{{imgUrl}}" style="height:{{height}}rpx; width:{{width}}rpx"/>
+  <text class="empty-text">{{title}}</text>
+</view>

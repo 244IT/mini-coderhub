@@ -1,0 +1,5 @@
+<!-- 发布按钮组件 @author: chh -->
+
+<view class="edit" bindtap="toUrl" data-url="/pages/edit/edit">
+  <text class="iconfont icon-edit"></text>
+</view>

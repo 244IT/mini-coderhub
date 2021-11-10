@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "chh-navigation-bar": "/components/chh-navigation-bar"
+  },
+  "navigationStyle": "custom"
+}

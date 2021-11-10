@@ -1,0 +1,37 @@
+<!-- 我的帖子 @author: chh -->
+<wxs src="../../../../wxs/filter.wxs" module="filter"></wxs>
+<!-- 动态列表 -->
+<view class="list">
+  <view class="list-item" wx:for="{{momentList}}" wx:key="index" catchtap="toDetail" data-item="{{item}}">
+    <view class="list-item-info">
+      <image class="avalar-img" src="{{item.author.avatar || 'https://sf3-ttcdn-tos.pstatp.com/img/mosaic-legacy/3795/3033762272~300x300.image'}}" lazy-load/>
+      <text class="info-username">{{item.author.userName}}</text>
+      <text class="info-dot">·</text>
+      <text class="info-time">{{filter.filterIndexTime(item.createTime)}}</text>
+      <text wx:if="{{item.labelList[0]}}" class="info-dot">·</text>
+      <text class="info-label">{{item.labelList[0]}}</text>
+      <text class="iconfont icon-edit" catchtap="onEdit" data-index="{{index}}"></text>
+      <text class="iconfont icon-delete" catchtap="onDelete" data-index="{{index}}"></text>
+    </view>
+    <view class="list-item-introduction">
+      {{item.title}}
+    </view>
+    <!-- <view class="list-item-introduction">
+      向微软官方贡献@types包后引发的思考types包后引发的思考types包后引发的思考
+    </view> -->
+    <view class="list-item-feedback">
+      <view class="favor">
+        <text class="iconfont icon-dianzan"></text>
+        <text>0</text>
+      </view>
+      <view class="comment">
+        <text class="iconfont icon-pinglun"></text>
+        <text>{{item.commentCount}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="empty" wx:if="{{momentList.length === 0}}">
+  <image class="empty-img" src="/assets/detail/empty.png"/>
+  <text>暂无帖子</text>
+</view>

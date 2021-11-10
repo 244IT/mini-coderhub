@@ -1,0 +1,19 @@
+/* components/kx-empty-coupon/kx-empty-coupon.wxss */
+/* 没有可领取的优惠券 */
+.empty{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100rpx 0 140rpx;
+}
+
+.empty-img{
+  width: 300rpx;
+  height: 188rpx;
+}
+
+.empty-text{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #999;
+}

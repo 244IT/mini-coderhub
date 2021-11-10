@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/login/childPages/register/register",
+    "pages/detail/detail",
+    "pages/profile/profile",
+    "pages/tag/tag",
+    "pages/edit/edit",
+    "pages/search/search",
+    "pages/profile/childPages/updatePassword/updatePassword",
+    "pages/profile/childPages/userInfo/userInfo",
+    "pages/profile/childPages/userMomentList/userMomentList",
+    "pages/profile/childPages/momentList/momentList",
+    "pages/profile/childPages/collectionList/collectionList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#C8CBD4",
+    "selectedColor": "#0D85FF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/tabbar/home.png",
+        "selectedIconPath": "/assets/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/tag/tag",
+        "text": "标签",
+        "iconPath": "/assets/tabbar/tag.png",
+        "selectedIconPath": "/assets/tabbar/tag_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "/assets/tabbar/profile.png",
+        "selectedIconPath": "/assets/tabbar/profile_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

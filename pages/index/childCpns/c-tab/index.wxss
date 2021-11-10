@@ -1,0 +1,33 @@
+/* pages/index/childCpns/c-tab/c-tab.wxss */
+
+/* 标签 */
+.label{
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #FFF;
+}
+.scroll-view{
+  height: 92rpx;
+  width: 710rpx;
+  background-color: #FFF;
+  white-space: nowrap;
+}
+
+.label-item, .list-label-item{
+  display: inline-block;
+  min-width: 100rpx;
+  line-height: 92rpx;
+  height: 92rpx;
+  margin: 0 24rpx;
+  color: #71777c;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.active{
+  color: #007fff;
+  border-bottom: 4rpx solid #1E8FF6;
+}
+
+

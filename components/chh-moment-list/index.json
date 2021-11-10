@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "chh-moment-item": "/components/chh-moment-item",
+    "chh-empty": "/components/chh-empty",
+    "chh-loading": "/components/chh-loading"
+  }
+}

@@ -1,0 +1,32 @@
+<!--登陆页 @author: chh-->
+<chh-navigation-bar back title="登录"/>
+
+<!-- 内容 -->
+<view class="content">
+  <image class="logo" src="/assets/login/logo.png" />
+
+  <view class="input-list">
+    <view class="input-item">
+      <input type="text" placeholder="用户名" model:value="{{username}}" bindinput="a"/>
+    </view>
+    <view class="input-item">
+      <input type="password" placeholder="密码" model:value="{{password}}" bindinput="a"/>
+    </view>
+  </view>
+
+  <!-- 按钮 -->
+  <view class="btn" hover-class="btn-hover" bindtap="onLogin">登录</view>
+  <!-- 帮助 -->
+  <view class="register">
+    <text>记住密码</text>
+    <checkbox class="checkbox" checked="{{checked}}" bindtap="onCheck" />
+    <text bindtap="toUrl" data-url="./childPages/register/register">用户注册</text>
+  </view>
+</view>
+  
+
+ 
+
+  
+  
+

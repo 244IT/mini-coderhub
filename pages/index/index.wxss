@@ -1,0 +1,25 @@
+@import '/styles/iconfont.wxss';
+@import "./index.skeleton.wxss";
+
+
+page{
+  background-color: #F4F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+
+.user-logo{
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 20rpx;
+  border-radius: 50%;
+}
+/* -------------------------标签---------------------------- */
+
+
+

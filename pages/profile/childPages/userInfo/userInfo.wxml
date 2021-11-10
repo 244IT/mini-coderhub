@@ -1,0 +1,31 @@
+<!--pages/profile/childPages/userInfo/userInfo.wxml-->
+<wxs src="../../../../wxs/filter.wxs" module="filter"></wxs>
+
+<view class="list">
+  <view class="list-item img-item" bindtap="onImage">
+    <text>头像</text>
+    <image class="user-img" src="{{filter.filterImg(userInfo.avatar_url) || '/assets/profile/user.png'}}"/>
+    <text class="iconfont icon-forward"></text>
+  </view>
+  <view class="list-item" bindtap="onUserInfo" data-type="0">
+    <text>昵称</text>
+    <text>{{userInfo.name}}</text>
+    <text class="iconfont icon-forward"></text>
+  </view>
+  <view class="list-item" bindtap="onUserInfo" data-type="1">
+    <text>签名</text>
+    <text>{{userInfo.sign ? userInfo.sign : '这个人很懒，暂无签名...'}}</text>
+    <text class="iconfont icon-forward"></text>
+  </view>
+</view>
+
+<!-- 模态框 -->
+<chh-dialog isShowDialog="{{isShowDialog}}" top="300">
+  <view slot="default" class="status-dialog">
+    <view class="dialog-title">{{dialogInfo.title}}</view>
+    <input type="text" placeholder="{{dialogInfo.placeholder}}" value="{{dialogInfo.value}}" bindinput="setUserInfo"/>
+    <view class="dialog-btn" bindtap="onSetUserInfo">提交</view>
+    <!-- 关闭 -->
+    <text class="iconfont icon-guanbi" bindtap="onFork"></text>
+  </view>
+</chh-dialog>

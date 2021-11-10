@@ -1,0 +1,11 @@
+<!--pages/index/childCpns/c-tab/c-tab.wxml-->
+<view class="label">
+  <scroll-view class="scroll-view" scroll-x="true" >
+    <block wx:for="{{labelList}}" wx:key="id" >
+      <text class="label-item {{index === tabIndex ? 'active' : '' }}" 
+            bindtap="onTab"  
+            data-index="{{index}}"
+            data-id="{{item.id}}">{{item.name}}</text>
+    </block>
+  </scroll-view>
+</view>

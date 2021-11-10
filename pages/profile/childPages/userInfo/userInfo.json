@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "chh-dialog": "/components/chh-dialog"
+  },
+  "navigationBarTitleText": "个人信息"
+}

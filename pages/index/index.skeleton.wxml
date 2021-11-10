@@ -1,0 +1,167 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/24 上午10:30:58 
+使用方法：
+在 E:\study\前端\小程序\miniProject\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 E:\study\前端\小程序\miniProject\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view is="components/chh-search/index">
+      <view class="search-index--header" style="border: none;">
+        <text class="search-index--iconfont search-index--icon-search sk-pseudo sk-pseudo-circle"></text>
+        <view disabled="true" class="search-index--search-input sk-image" data-type="navigateTo" data-url="../search/search" placeholder="搜索帖子..." placeholder-style="color:#666" type="text" style="border: none;"></view>
+        <view class="search-index--tag" data-type="switchTab" data-url="/pages/tag/tag">
+          <text class="search-index--iconfont search-index--icon-set sk-pseudo sk-pseudo-circle"></text>
+          <text class="search-index--tag-text sk-transparent sk-text-14-2857-209 sk-text">标签</text>
+        </view>
+      </view>
+    </view>
+    <view is="pages/index/childCpns/c-tab/index" style="{{showLabelList ? 'visibility: hidden' : ''}}"> 
+      <view class="tab-index-label">
+        <scroll-view class="tab-index--scroll-view" scroll-x="true">
+          <text class="tab-index--label-item tab-index--active sk-transparent sk-text-32-6087-640 sk-text" data-id="0" data-index="0" style="border: none; background-position-x: 50%;">全部</text>
+          <text class="tab-index--label-item sk-transparent sk-text-32-6087-815 sk-text" data-id="1" data-index="1" style="background-position-x: 50%;">计算机</text>
+          <text class="tab-index--label-item sk-transparent sk-text-32-6087-861 sk-text" data-id="3" data-index="2" style="background-position-x: 50%;">财经</text>
+          <text class="tab-index--label-item sk-transparent sk-text-32-6087-619 sk-text" data-id="4" data-index="3" style="background-position-x: 50%;">比赛</text>
+          <text class="tab-index--label-item sk-transparent sk-text-32-6087-566 sk-text" data-id="5" data-index="4" style="background-position-x: 50%;">运动</text>
+        </scroll-view>
+      </view>
+    </view>
+    <view is="components/chh-moment-list/index" hidden="{{showMomentList}}">
+      <view class="list-index--list">
+        <view is="components/chh-moment-item/index">
+          <view class="item-index--list-item" data-index="0" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-378 sk-text">rose</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-545 sk-text">7天前</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-label sk-transparent sk-text-14-2857-320 sk-text">比赛</text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-306 sk-text">
+                测试测试
+              </view>
+              <view class="item-index--list-item-feedback">
+                <view class="item-index--favor" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-dianzan sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">1</text>
+                </view>
+                <view class="item-index--comment" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-pinglun sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">2</text>
+                </view>
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+          <view class="item-index--list-item" data-index="1" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-484 sk-text">coderwhy</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-868 sk-text">17天前</text>
+                <text class="item-index--info-label"></text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-260 sk-text">
+                测试测试
+              </view>
+              <view class="item-index--list-item-feedback">
+                <view class="item-index--favor" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-dianzan sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">1</text>
+                </view>
+                <view class="item-index--comment" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-pinglun sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">0</text>
+                </view>
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+          <view class="item-index--list-item" data-index="2" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-843 sk-text">curry</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-634 sk-text">1月前</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-label sk-transparent sk-text-14-2857-118 sk-text">失物招领</text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-774 sk-text">
+                我的钥匙丢了
+              </view>
+              <view class="item-index--list-item-feedback">
+                <view class="item-index--favor" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-dianzan sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">0</text>
+                </view>
+                <view class="item-index--comment" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-pinglun sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">0</text>
+                </view>
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+          <view class="item-index--list-item" data-index="3" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-138 sk-text">curry</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-757 sk-text">1月前</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-label sk-transparent sk-text-14-2857-467 sk-text">生活</text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-798 sk-text">
+                我的生活
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+          <view class="item-index--list-item" data-index="4" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-138 sk-text">curry</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-757 sk-text">1月前</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-label sk-transparent sk-text-14-2857-467 sk-text">生活</text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-798 sk-text">
+                我的生活
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

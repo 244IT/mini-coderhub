@@ -1,0 +1,23 @@
+<!--pages/edit/edit.wxml-->
+<view class="content">
+  <view class="tag">
+    <text class="iconfont icon-tag1"></text>
+    <picker range="{{labelList}}" range-key="name" bindchange="onLabel">{{selectLabel.name}}</picker>
+    <text class="iconfont icon-forward"></text>
+  </view>
+  <view class="edit">
+    <view class="edit-title">
+      <input type="text" placeholder="这个帖子距离火就差这个标题了..." model:value="{{title}}"/>
+    </view>
+    <textarea class="edit-textarea" model:value="{{content}}" placeholder="来吧，尽情发挥吧..." cols="30" rows="10" maxlength="-1"></textarea>
+    <view class="img-list">
+      <image class="img-item" wx:for="{{imgList}}" wx:key="index" src="{{item}}" bindtap="onImage" data-url="{{item}}"/>
+      <view class="img-item" bindtap="onUpload">
+        <text class="iconfont icon-add" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 按钮 -->
+<view class="btn" bindtap="onSubmit">{{momentId ? '修改' : '发布'}}</view>

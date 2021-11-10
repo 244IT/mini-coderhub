@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "chh-search": "/components/chh-search",
+    "chh-dialog": "/components/chh-dialog",
+    "chh-empty": "/components/chh-empty"
+  },
+  "navigationBarTitleText": ""
+}

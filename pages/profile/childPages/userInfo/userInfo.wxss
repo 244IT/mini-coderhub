@@ -1,0 +1,85 @@
+/* pages/profile/childPages/userInfo/userInfo.wxss */
+@import '/styles/iconfont.wxss';
+
+
+/* 列表 */
+.list{
+  padding: 0 30rpx;
+  color: #333;
+}
+.list-item{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1rpx solid rgba(178, 186, 194, 0.1);
+}
+.img-item{
+  height: 150rpx;
+}
+
+.list-item text:first-child{
+  flex: 1;
+}
+
+.user-img{
+  height: 120rpx;
+  width: 120rpx;
+  margin-right: 20rpx;
+  border-radius: 60rpx;
+}
+
+/* 模态框 */
+.dialog{
+  line-height: 100rpx;
+  padding: 20rpx;
+  text-align: center;
+}
+/* 模态框按钮 */
+.btn-wrap{
+  display: flex;
+}
+
+.status-dialog{
+  position: relative;
+  padding: 40rpx 20rpx;
+  text-align: center;
+  font-family: PingFang;
+}
+
+.dialog-title{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #040000;
+}
+
+.dialog-tip{
+  margin: 40rpx 0;
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #EF3E34;
+}
+
+.status-dialog input{
+  height: 80rpx;
+  margin: 30rpx 0;
+  border: 1rpx solid #E5E5E5;
+  border-radius: 10rpx;
+}
+
+.dialog-btn{
+  margin-top: 40rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  font-family: PingFang;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #1E8FF6;
+  text-align: center;
+  border-radius: 8rpx;
+}
+
+.icon-guanbi{
+  position: absolute;
+  right: 30rpx;
+  top: 50rpx;
+}

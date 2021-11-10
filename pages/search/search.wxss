@@ -1,0 +1,216 @@
+/* pages/search/search.wxss */
+@import '/styles/iconfont.wxss';
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  background-color: #ffffff;
+  position: fixed;
+  height: 100rpx;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  align-items: center;
+  z-index: 99;
+}
+
+.search-container {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 50px;
+  margin-left: 20rpx;
+}
+
+.in-bar {
+  color: #999;
+}
+
+.bar {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: inline-block;
+  height: 68rpx;
+  width: 1000rpx;
+  font-size: 28rpx;
+}
+
+.icon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 24rpx;
+  margin-right: 16rpx;
+}
+
+.cancel {
+  line-height: 68rpx;
+  width: 120rpx;
+  text-align: center;
+  display: inline-block;
+  border: none;
+}
+
+.icon-guanbi1 {
+  width: 28rpx;
+  height: 28rpx;
+  padding: 20rpx 0 20rpx 20rpx;
+  margin-right: 20rpx;
+  font-size: 34rpx;
+  color: #C7C7C7;
+}
+
+.history {
+  width: 690rpx;
+  margin: 40rpx 0 20rpx 0;
+  display: flex;
+  font-size: 28rpx;
+  margin-top: 160rpx;
+  flex-direction: column;
+}
+
+.hot-search {
+  margin-top: 70rpx;
+}
+
+.title {
+  line-height: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.books-container v-book {
+  margin-bottom: 25rpx;
+}
+
+.books-container {
+  width: 570rpx;
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 90rpx 0 90rpx;
+  justify-content: space-between;
+}
+
+.loading {
+  margin: 50rpx 0 50rpx 0;
+}
+
+.loading-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.empty-tip {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+}
+
+.chunk {
+  height: 30rpx;
+  width: 10rpx;
+  background-color: #1E8FF6;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.tags {
+  /* padding-left:15px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 24rpx;
+  padding-left: 30rpx;
+  width: 630rpx;
+}
+.tag-class{
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.tags v-tag {
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.bar {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: inline-block;
+  height: 68rpx;
+  width: 500rpx;
+  font-size: 28rpx;
+}
+
+/* -------------------------列表----------------------- */
+.list{
+  width: 100%;
+  margin-top: 100rpx;
+}
+.list-label{
+  border-bottom: 1rpx solid rgba(178, 186, 194, 0.1);
+}
+.list-label-item:not(:last-child) {
+  border-bottom: 1rpx solid rgba(178, 186, 194, 0.1);
+}
+.list-label-item{
+  height: 32rpx;
+}
+
+.list-item{
+  padding: 36rpx 48rpx;
+  background-color: #FFF;
+}
+.list-item:not(:last-child) {
+  border-bottom: 1rpx solid rgba(178, 186, 194, 0.1);
+}
+.list-item-info{
+  display: flex;
+  align-items: center;
+  color: #b2bac2;
+}
+.info-time{
+  margin: 0 20rpx;
+  font-size: 24rpx;
+}
+
+.list-item-feedback{
+  display: flex;
+  color: #B2BAC2;
+}
+.list-item-feedback view{
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  border: 1rpx solid #edeeef;
+}
+.list-item-introduction{
+  margin: 12rpx 0 24rpx;
+  font-weight: bold;
+  color: rgb(46, 49, 53);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.icon-dianzan, .icon-pinglun{
+  margin-right: 10rpx;
+}
+
+.avalar-img{
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}

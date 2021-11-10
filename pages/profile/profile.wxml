@@ -1,0 +1,47 @@
+<!--pages/profile/profile.wxml-->
+<wxs src="../../wxs/filter.wxs" module="filter"></wxs>
+<!-- 头部 -->
+<view class="header" bindtap="onHeader">
+  <block wx:if="{{!userInfo}}">
+    <text class="iconfont icon-user"></text>
+    <text>登录/注册</text>
+    <text class="iconfont icon-forward"></text>
+  </block>
+  <block wx:else>
+    <image class="user-img" src="{{filter.filterImg(userInfo.avatar_url) || '/assets/profile/user.png'}}"/>
+    <view class="username">
+      <text>昵称：{{userInfo.name}}</text>
+      <text>签名：{{userInfo.sign ? userInfo.sign : '这个人很懒...'}}</text>
+    </view>
+    <view class="iconfont icon-forward"></view>
+  </block>
+</view>
+
+<!-- 列表 -->
+<view class="list">
+  <view class="list-item" bindtap="toUrl" data-url="./childPages/userMomentList/userMomentList">
+    <text class="iconfont icon-article"></text>
+    <text>我的贴子</text>
+  </view>
+  <view class="list-item" bindtap="toUrl" data-url="./childPages/momentList/momentList?type=1">
+    <text class="iconfont icon-dianzan"></text>
+    <text>我赞过的</text>
+  </view>
+  <view class="list-item" bindtap="toUrl" data-url="./childPages/collectionList/collectionList">
+    <text class="iconfont icon-xingxingxuanzhongzhuangtai"></text>
+    <text>收藏集</text>
+  </view>
+</view>
+
+<view class="list">
+  <view class="list-item" bindtap="toUrl" data-url="./childPages/momentList/momentList?type=3">
+    <text class="iconfont icon-see"></text>
+    <text>阅读过的文章</text>
+  </view>
+  <view class="list-item" bindtap="toUrl" data-url="./childPages/updatePassword/updatePassword">
+    <text class="iconfont icon-password"></text>
+    <text>修改密码</text>
+  </view>
+</view>
+
+<view class="logout" bindtap="onLogout">退出登录</view>

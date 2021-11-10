@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "chh-dialog": "/components/chh-dialog",
+    "chh-empty": "/components/chh-empty"
+  },
+  "navigationBarTitleText": "我的收藏集",
+  "enablePullDownRefresh": true
+}

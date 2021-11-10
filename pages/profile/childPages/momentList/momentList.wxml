@@ -1,0 +1,7 @@
+<!-- 点赞帖子 @author: chh -->
+<wxs src="../../../../wxs/filter.wxs" module="filter"></wxs>
+
+<!-- 动态（帖子）列表 -->
+<chh-moment-list momentList="{{momentList}}" hasMore="{{hasMore}}" bind:toDetail="toDetail"/>
+
+

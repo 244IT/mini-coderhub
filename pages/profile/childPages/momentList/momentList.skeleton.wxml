@@ -1,0 +1,166 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/20 上午11:00:15 
+使用方法：
+在 E:\study\前端\小程序\miniProject\pages\profile\childPages\momentList\momentList.wxml 引入模板
+
+```
+<import src="momentList.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 E:\study\前端\小程序\miniProject\pages\profile\childPages\momentList\momentList.wxss 中引入样式
+```
+@import "./momentList.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view is="components/chh-moment-list/index">
+      <view class="list-index--list">
+        <view is="components/chh-moment-item/index">
+          <view class="item-index--list-item" data-index="0" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-73 sk-text">rose</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-415 sk-text">3天前</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-label sk-transparent sk-text-14-2857-995 sk-text">比赛</text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-389 sk-text">
+                测试测试
+              </view>
+              <view class="item-index--list-item-feedback">
+                <view class="item-index--favor" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-dianzan sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">2</text>
+                </view>
+                <view class="item-index--comment" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-pinglun sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">2</text>
+                </view>
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+          <view class="item-index--list-item" data-index="1" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-498 sk-text">rose</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-564 sk-text">5月前</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-label sk-transparent sk-text-14-2857-39 sk-text">运动</text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-558 sk-text">
+                测试标题1
+              </view>
+              <view class="item-index--list-item-feedback">
+                <view class="item-index--favor" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-dianzan sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">2</text>
+                </view>
+                <view class="item-index--comment" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-pinglun sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">2</text>
+                </view>
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+          <view class="item-index--list-item" data-index="2" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-1000 sk-text">rose</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-532 sk-text">5月前</text>
+                <text class="item-index--info-label"></text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-90 sk-text">
+                测试标题9
+              </view>
+              <view class="item-index--list-item-feedback">
+                <view class="item-index--favor" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-dianzan sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">1</text>
+                </view>
+                <view class="item-index--comment" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-pinglun sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">0</text>
+                </view>
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+          <view class="item-index--list-item" data-index="3" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-303 sk-text">chh</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-769 sk-text">5月前</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-label sk-transparent sk-text-14-2857-864 sk-text">运动</text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-28 sk-text">
+                提升腿部训练效果 请在菜单中加这个！
+              </view>
+              <view class="item-index--list-item-feedback">
+                <view class="item-index--favor" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-dianzan sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">2</text>
+                </view>
+                <view class="item-index--comment" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-pinglun sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">0</text>
+                </view>
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+          <view class="item-index--list-item" data-index="4" data-item="[object Object]" style="border: none;">
+            <view class="item-index--list-item-left">
+              <view class="item-index--list-item-info">
+                <image lazy-load="true" class="item-index--avalar-img sk-image"></image>
+                <text class="item-index--info-username sk-transparent sk-text-14-2857-500 sk-text">yxc</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-time sk-transparent sk-text-14-2857-355 sk-text">5月前</text>
+                <text class="item-index--info-dot sk-transparent sk-opacity">·</text>
+                <text class="item-index--info-label sk-transparent sk-text-14-2857-7 sk-text">运动</text>
+              </view>
+              <view class="item-index--list-item-introduction sk-transparent sk-text-14-2857-961 sk-text">
+                晨跑小分队报名
+              </view>
+              <view class="item-index--list-item-feedback">
+                <view class="item-index--favor" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-dianzan sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">2</text>
+                </view>
+                <view class="item-index--comment" style="border: none;">
+                  <text class="item-index--iconfont item-index--icon-pinglun sk-pseudo sk-pseudo-circle"></text>
+                  <text class="sk-transparent sk-opacity">1</text>
+                </view>
+              </view>
+            </view>
+            <view class="item-index--list-item-right">
+              <image class="item-index--list-img sk-image"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

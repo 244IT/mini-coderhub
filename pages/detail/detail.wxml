@@ -1,0 +1,138 @@
+<!-- 详情页 @author: chh -->
+<wxs src="../../wxs/filter.wxs" module="filter"></wxs>
+<!-- 头部 -->
+<chh-search bindtoUrl="toUrl" />
+<!-- 内容 -->
+<view class="content">
+  <!-- 作者信息 -->
+  <view class="user-info">
+    <image class="avalar-img" src="{{momentDetail.author.avatar}}"/>
+    <view class="user-info-right">
+      <view class="username">
+        <text>{{momentDetail.author.userName}}</text>
+        <!-- <image class="level-img" src="{{level4Img}}"/> -->
+      </view>
+      <view class="article-info">
+        <text>{{filter.filterCreateTime(momentDetail.createTime, 1)}}</text>
+        <text>{{momentDetail.labelList[0]}}</text>
+      </view>
+      <!-- <view class="follow">关注</view> -->
+    </view>
+  </view>
+  <!-- 文章内容 -->
+  <view class="article-content">
+    <view class="article-title">{{momentDetail.title}}</view>
+    <view class="article-detail">
+       {{momentDetail.content}}
+    </view>
+    <view class="img-list">
+      <image class="img-item" wx:for="{{momentDetail.images}}" wx:key="index" src="{{item}}" bindtap="onImage" data-url="{{item}}"/>
+    </view>
+  </view>
+</view>
+<!-- 评论列表 -->
+<view class="comment">
+  <block wx:if="{{commentList.length}}">
+    <view class="comment-item" wx:for="{{commentList}}" wx:key="commentId" >
+      <image class="reply-user-img" src="{{item.user.avatar}}" lazy-load/>
+      <view class="comment-item-right">
+        <view class="right-top">
+          <text class="reply-username">{{item.user.name}}</text>
+          <text class="iconfont {{item.isFavor ? 'icon-dianzan' : 'icon-dianzan1'}}" 
+                bindtap="onFavorComment" 
+                data-index="{{index}}" 
+                data-comment-id="{{item.commentId}}">
+          </text>
+          <text class="comment-favor" style="{{item.favorCount ? '' : 'visibility:hidden;'}}">{{item.favorCount}}</text>
+          <text class="iconfont icon-comment-v2" 
+                bindtap="onReplyComment" 
+                data-comment-id="{{item.commentId}}" 
+                data-user="{{item.user.name}}"
+                data-index="{{index}}"
+                >
+          </text>
+          <text class="comment-favor" style="{{item.replyCount ? '' : 'visibility:hidden;'}}">{{item.replyCount}}</text>
+        </view>
+        <view class="reply-time">{{filter.filterIndexTime(item.replyTime)}}</view>
+        <view class="reply-content">{{item.content}}</view>
+        <view class="more-reply" wx:if="{{item.replyList}}" >
+          <view class="more-reply-item" 
+                wx:for="{{item.replyList}}" 
+                wx:for-item="subitem" 
+                wx:for-index="subindex" 
+                wx:key="commentId"
+                bindtap="onReplyComment"
+                data-comment-id="{{item.commentId}}"
+                data-reply-comment-id="{{subitem.commentId}}"
+                data-user="{{subitem.user.name}}"
+                data-index="{{index}}"
+                >
+            <text class="more-reply-user">{{subitem.user.name}}{{subitem.replyUser && subitem.replyUser.name !== item.user.name ? '回复' + subitem.replyUser.name : ''}}：</text>
+            <text>{{subitem.content}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="empty">
+      <image class="empty-img" src="/assets/detail/empty.png"/>
+      <text>暂无评论</text>
+    </view>
+  </block>
+</view>
+
+
+<!-- 底部评论 -->
+<view class="bottom-comment">
+  <input class="bottom-comment-input" value="{{comment}}" focus="{{inputFocus}}" type="text" placeholder="{{inputPlaceholder}}" bindconfirm="onSetComment"/>
+  <view class="bottom-comment-favor" bindtap="onFavor">
+    <text class="iconfont {{momentDetail.isFavor ? 'icon-dianzan' : 'icon-dianzan1'}}"></text>
+    <text>{{momentDetail.favorCount}}</text>
+  </view>
+  <view class="bottom-comment-favor" bindtap="onComment">
+    <text class="iconfont icon-comment-v2"></text>
+    <text>{{momentDetail.commentCount}}</text>
+  </view>
+  <view class="bottom-comment-collect" bindtap="toggleCollect">
+    <text class="iconfont {{momentDetail.isCollect ? 'icon-shoucang-' : 'icon-shoucang'}}"></text>
+  </view>
+</view>
+
+
+<!-- 收藏夹 -->
+<view class="collect-dialog">
+	<!-- 遮罩层 -->
+  <view class="collect-mark" wx:if="{{showCollect}}"  catchtap="toggleCollect"></view>
+  <!-- 内容 -->
+  <view class="collect-wrap" style="{{showCollect ? 'transform: translateY(0%);' : ''}}">
+    <!-- 头部 -->
+    <view class="collect-title">
+      <text>添加到收藏夹</text>
+      <text bindtap="toggleDialog">+新建收藏夹</text>
+    </view>
+    <!-- 收藏夹列表 -->
+    <view class="collect-list" wx:if="{{collectionList.length}}">
+      <view class="collect-item" wx:for="{{collectionList}}" wx:key="id" bindtap="onCollect" data-collection-id="{{item.collectionId}}">
+        <view class="collection-title">{{item.name}}</view>
+        <view class="collection-info">
+          <text>{{item.momentCount}}篇</text>•
+          <text>244IT</text>
+        </view>
+      </view>
+    </view>
+    <chh-empty wx:else imgUrl="/assets/detail/coupon_empty.png" title="暂无收藏夹" />
+  </view>
+</view>
+
+
+<!-- 模态框 -->
+<chh-dialog isShowDialog="{{isShowDialog}}" top="300">
+  <view slot="default" class="status-dialog">
+    <view class="dialog-title">新建收藏集</view>
+    <input type="text" placeholder="请输入收藏集的名称" model:value="{{collection}}" bindinput="setUserInfo"/>
+    <view class="dialog-btn" bindtap="onAddCollection">提交</view>
+    <!-- 关闭 -->
+    <text class="iconfont icon-guanbi" bindtap="toggleDialog"></text>
+  </view>
+</chh-dialog>

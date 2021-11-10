@@ -1,0 +1,14 @@
+<!-- 模态框组件 @author: chh -->
+
+<!-- 遮罩层 -->
+<view class="modal-mask mask-class" 
+      bindtap="onHideModal" 
+      catchtouchmove="preventTouchMove" 
+      hidden="{{!isShowDialog}}">
+</view>
+<!-- 模态框 -->
+<view class="modal-dialog dialog-class" hidden="{{!isShowDialog}}" style="top: {{top}}rpx;">
+  <!-- 默认slot -->
+  <slot name="default"></slot>
+  <slot name="btn"></slot>
+</view>

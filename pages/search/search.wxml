@@ -1,0 +1,47 @@
+<!-- 搜索页 @author: chh -->
+<wxs src="../../wxs/filter.wxs" module="filter"></wxs>
+
+<view class="container">
+  <view class="header">
+      <view class="search-container">
+          <image class="icon" src="/assets/search/search.png" />
+          <input value="{{q}}"  bind:confirm="onConfirm" placeholder-class='in-bar' placeholder='帖子名' class='bar' focus="{{true}}" />
+          <!-- <image bind:tap="onDelete" class="cancel-img" src="images/cancel.png" /> -->
+          <text class="iconfont icon-guanbi1" bindtap="onDelete"/>
+      </view>
+      <view bind:tap="onCancel" class='cancel'>取消</view>
+  </view>
+  <view class="history" wx:if="{{!isShowList}}">
+      <view class="title">
+          <view class="chunk"></view>
+          <text>历史搜索</text>
+      </view>
+      <view class="tags">
+        <chh-tag tag-class="tag-class" wx:for="{{wordList}}" wx:key="index" text="{{item}}" bindtap="onTag" data-value="{{item}}"/>
+      </view> 
+  </view>
+  <!-- 动态（帖子）列表 -->
+  <view class="list" wx:else>
+    <view class="list-item" wx:for="{{momentList}}" wx:key="index" bindtap="toDetail" data-item="{{item}}">
+      <view class="list-item-info">
+        <image class="avalar-img" src="{{item.author.avatar || 'https://sf3-ttcdn-tos.pstatp.com/img/mosaic-legacy/3795/3033762272~300x300.image'}}" lazy-load/>
+        <text class="info-username">{{item.author.userName}}</text>
+        <text class="info-time">{{filter.filterCreateTime(item.createTime)}}</text>
+        <text class="info-label">{{item.labelList[0]}}</text>
+      </view>
+      <view class="list-item-introduction">
+        {{item.title}}
+      </view>
+      <view class="list-item-feedback">
+        <view class="favor">
+          <text class="iconfont icon-dianzan"></text>
+          <text>28</text>
+        </view>
+        <view class="comment">
+          <text class="iconfont icon-pinglun"></text>
+          <text>{{item.commentCount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

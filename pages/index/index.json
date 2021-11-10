@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "chh-search": "/components/chh-search",
+    "chh-moment-list": "/components/chh-moment-list",
+    "chh-loading": "/components/chh-loading",
+    "c-tab": "./childCpns/c-tab",
+    "c-edit": "./childCpns/c-edit"
+  },
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true
+}

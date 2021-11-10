@@ -1,0 +1,36 @@
+<!--components/chh-moment-list/chh-moment-.wxml-->
+<wxs src="../../wxs/filter.wxs" module="filter"></wxs>
+
+<view class="list-item" 
+        wx:for="{{momentList}}" 
+        wx:key="index" 
+        bindtap="toDetail" 
+        data-item="{{item}}"
+        data-index="{{index}}">
+  <view class="list-item-left">
+    <view class="list-item-info">
+      <image class="avalar-img" src="{{item.author.avatar || 'https://sf3-ttcdn-tos.pstatp.com/img/mosaic-legacy/3795/3033762272~300x300.image'}}" lazy-load/>
+      <text class="info-username">{{item.author.userName}}</text>
+      <text class="info-dot">·</text>
+      <text class="info-time">{{filter.filterIndexTime(item.createTime)}}</text>
+      <text wx:if="{{item.labelList[0]}}" class="info-dot">·</text>
+      <text class="info-label">{{item.labelList[0]}}</text>
+    </view>
+    <view class="list-item-introduction">
+      {{item.title}}
+    </view>
+    <view class="list-item-feedback">
+      <view class="favor">
+        <text class="iconfont icon-dianzan"></text>
+        <text>{{item.favorCount}}</text>
+      </view>
+      <view class="comment">
+        <text class="iconfont icon-pinglun"></text>
+        <text>{{item.commentCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="list-item-right">
+    <image class="list-img" src="{{item.images[0]}}"/>
+  </view>
+</view>

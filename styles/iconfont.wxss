@@ -1,0 +1,112 @@
+/* 字体图标库 @author: chh */
+
+@font-face {
+  font-family: "iconfont"; /* Project id 2353935 */
+  src: url('//at.alicdn.com/t/font_2353935_bd6oautklzh.woff2?t=1620183347735') format('woff2'),
+       url('//at.alicdn.com/t/font_2353935_bd6oautklzh.woff?t=1620183347735') format('woff'),
+       url('//at.alicdn.com/t/font_2353935_bd6oautklzh.ttf?t=1620183347735') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 18px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shoucang:before {
+  content: "\e78c";
+}
+
+.icon-shoucang-:before {
+  content: "\e646";
+}
+
+.icon-guanbi1:before {
+  content: "\e6c6";
+}
+
+.icon-delete:before {
+  content: "\e604";
+}
+
+.icon-guanbi:before {
+  content: "\e607";
+}
+
+.icon-password:before {
+  content: "\e682";
+}
+
+.icon-article:before {
+  content: "\ea13";
+}
+
+.icon-set:before {
+  content: "\e6aa";
+}
+
+.icon-search:before {
+  content: "\e621";
+}
+
+.icon-edit:before {
+  content: "\e63c";
+}
+
+.icon-add:before {
+  content: "\e620";
+}
+
+.icon-tag1:before {
+  content: "\e643";
+}
+
+.icon-forward:before {
+  content: "\e600";
+}
+
+.icon-tag:before {
+  content: "\e65e";
+}
+
+.icon-nosee:before {
+  content: "\e617";
+}
+
+.icon-see:before {
+  content: "\e61a";
+}
+
+.icon-user:before {
+  content: "\e60e";
+}
+
+.icon-xingxingxuanzhongzhuangtai:before {
+  content: "\e618";
+}
+
+.icon-dianzan1:before {
+  content: "\e60d";
+}
+
+.icon-comment-v2:before {
+  content: "\e9b0";
+}
+
+.icon-pinglun:before {
+  content: "\e629";
+}
+
+.icon-dianzan:before {
+  content: "\e60c";
+}
+
+.icon-Pathx:before {
+  content: "\e603";
+}
+
+.icon-shixinjiantou-xiangshang-copy:before {
+  content: "\e65a";
+}

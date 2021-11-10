@@ -1,0 +1,10 @@
+<!-- 动态列表组件 @author: chh -->
+<!-- 动态（帖子）列表 -->
+<chh-loading wx:if="{{showLoading}}" class="loading" />
+<block wx:else>
+  <view class="list" wx:if="{{momentList.length}}">
+  <chh-moment-item momentList="{{momentList}}" bind:toDetail="toDetail"/>
+  <view class="line" wx:if="{{!hasMore}}">-----------------我也是有底线的-----------------</view>
+  </view>
+  <chh-empty wx:else imgUrl="/assets/index/icon_order.png" title="暂无帖子" />
+</block>

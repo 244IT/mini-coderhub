@@ -1,0 +1,36 @@
+<!--pages/profile/childPages/collectionList/index.wxml-->
+
+<!-- 收藏夹列表 -->
+<view class="list" wx:if="{{collectionList.length}}">
+  <view class="item" 
+        wx:for="{{collectionList}}" 
+        wx:key="id" 
+        bindtap="toUrl" 
+        bindlongpress="onEdit"
+        data-index="{{index}}"
+        data-collection-id="{{item.collectionId}}"
+        data-url="../momentList/momentList?type=2&id={{item.collectionId}}&name={{item.name}}">
+    <view>
+      <view class="item-title">{{item.name}}</view>
+      <view class="item-info">
+        <text>{{item.momentCount}}篇</text>•
+        <text>{{username}}</text>
+      </view>
+    </view>
+    <view class="iconfont icon-forward"></view>
+  </view>
+</view>
+
+<chh-empty wx:else imgUrl="/assets/detail/coupon_empty.png" title="暂无收藏夹" />
+
+
+<!-- 模态框 -->
+<chh-dialog isShowDialog="{{isShowDialog}}" top="300">
+  <view slot="default" class="status-dialog">
+    <view class="dialog-title">编辑收藏夹</view>
+    <input type="text" placeholder="请输入收藏集的名称" model:value="{{collection}}" />
+    <view class="dialog-btn" bindtap="onRenameCollection">提交</view>
+    <!-- 关闭 -->
+    <text class="iconfont icon-guanbi" bindtap="toggleDialog"></text>
+  </view>
+</chh-dialog>

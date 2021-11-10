@@ -1,0 +1,16 @@
+<!--components/chh-search/index.wxml-->
+<view class="header">
+  <text class="iconfont icon-search"></text>
+  <input class="search-input" 
+         disabled 
+         type="text" 
+         placeholder="搜索帖子..." 
+         placeholder-style="color:#666"
+         bindtap="toUrl"
+         data-type="navigateTo"
+         data-url="../search/search"/>
+  <view class="tag" bindtap="toUrl" data-url="/pages/tag/tag" data-type="switchTab"> 
+    <text class="iconfont icon-set"></text>
+    <text class="tag-text">标签</text>
+  </view>
+</view>

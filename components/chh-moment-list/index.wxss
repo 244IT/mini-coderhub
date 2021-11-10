@@ -1,0 +1,22 @@
+/* components/chh-moment-list/index.wxss */
+/* -------------------------加载中--------------------- */
+.loading{
+  display: flex;
+  justify-content: center;
+  margin-top: 200rpx;
+}
+/* -------------------------列表----------------------- */
+.list{
+  margin-top: 20rpx;
+ 
+}
+
+
+.line{
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  color: #CCC;
+  background-color: #FFF;
+}

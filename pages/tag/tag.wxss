@@ -1,0 +1,77 @@
+/* pages/tag/tag.wxss */
+@import '/styles/iconfont.wxss';
+/* tab */
+.tab{
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0rpx 2rpx 10rpx 5rpx rgba(0, 0, 0, .1);
+  background-color: #FFF;
+}
+.bottom-line{
+  position: absolute;
+  /* left: 460rpx;   88,  460 */
+  right: 0;
+  bottom: 0;
+  width: 200rpx;
+  height: 4rpx;
+  background-color: #1E8FF6;
+  transition: left .5s ease;
+}
+.tab-item{
+  line-height: 80rpx;
+  width: 200rpx;
+  font-size: 34rpx;
+  color: #b1b5c0;
+  text-align: center;
+  box-sizing: border-box;
+}
+.tab .active {
+  color: #1E8FF6;
+}
+
+
+
+/* 标签列表 */
+.list-item{
+  display: flex;
+  align-items: center;
+  padding: 40rpx;
+  border-bottom: 1rpx solid rgba(178, 186, 194, 0.1);
+  box-sizing: border-box;
+}
+.item-img{
+  height: 100rpx;
+  width: 100rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.tag-title{
+  flex: 1;
+  font-size: 40rpx;
+  color: #333;
+}
+
+.tag-btn{
+  line-height: 58rpx;
+  width: 150rpx;
+  font-size: 30rpx;
+  /* color: #b1b5c0; */
+  color: #1E8FF6;
+  text-align: center;
+  background-color: #EEF2F3;
+  border-radius: 29rpx;
+}
+
+.tag-btn .gray{
+  color: #b1b5c0;
+}
+
+.icon-add{
+  margin-right: 4rpx;
+  font-size: 20rpx;
+  font-weight: bold;
+}
