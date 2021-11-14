@@ -75,3 +75,39 @@
   font-size: 20rpx;
   font-weight: bold;
 }
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300rpx;
+}
+.login-tip{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-tip image{
+  height: 240rpx;
+  width: 260rpx;
+}
+.login-tip view{
+  margin: 40rpx 0;
+  font-size: 32rpx;
+  color: #999;
+}
+
+.login-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300rpx;
+  height: 80rpx;
+  color: #FFF;
+  background-color: #0180FF;
+  border-radius: 10rpx;
+}
+
+.login-btn:active{
+  opacity: .8;
+}

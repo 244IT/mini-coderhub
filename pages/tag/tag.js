@@ -19,6 +19,7 @@ Page({
     subPage: 0, // 用户标签页数
     size: 10, // 页大小
     listHeight: [], // 标签列表高度
+    hasLogin: false, // 是否登录
   },
 
   /**
@@ -26,7 +27,7 @@ Page({
    */
   async onLoad (options) {
     // 初始化数据
-    this._initData()
+    if(this._initData()) return
     // 获取标签列表
     await this.getLabelList()
     // 获取用户关注的标签列表
@@ -165,9 +166,15 @@ Page({
   /* --------------------------------------页面方法------------------------------------ */
   /* 初始化数据 */
   _initData() {
-    const { id } = wx.getStorageSync('userInfo')
+    const { userInfo } = app.globalData
+    if(!userInfo) return true
+    const { token, id } = userInfo
+    let hasLogin = false
+    if(!token) return true
+    hasLogin = true
     this.setData({
-      userId: id
+      userId: id,
+      hasLogin
     })
   },
   /* 初始化参数 */
