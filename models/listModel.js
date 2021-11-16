@@ -5,7 +5,6 @@ export class ListModel{
   constructor() {}
   /* 结果处理 */
   static handleResult(that, options) {
-    console.log(options, typeof options)
     if(options.result.data.length === 0) {  
       that.data.hasMore = false
       if(that.data.pageNo !== 1) {
@@ -24,12 +23,10 @@ export class ListModel{
   static assignData(that, options) {
     const list = that.data[options.listName]
     if(options.isNew) {
-      console.log('直接替换')
       that.setData({
         [options.listName] : options.result.data
       })
     }else {
-      console.log('新增')
       list.push(...options.result.data)
       that.setData({
         [options.listName] : list

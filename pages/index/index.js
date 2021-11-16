@@ -1,5 +1,6 @@
 /* 接口 */
 import { getMomentList, getLabelList, getMomentByLabel } from '../../service/api'
+import * as API from '../../service/baseApi'
 /* 工具库 */
 import { navigateTo } from '../../utils/util'
 /* 模型 */
@@ -10,7 +11,7 @@ import { listenStore } from '../../store/index'
 
 const app = getApp()
 
-const page = Page({ 
+Page({ 
   data: {
     momentList: [], // 帖子列表
     labelList: [], // 标签列表
@@ -29,6 +30,8 @@ const page = Page({
   },
   /* ----------------------------------页面生命周期--------------------------------- */
   onLoad() {
+    this.getMomentListApi()
+    this.getLabelListApi()
     // 获取帖子列表
     this.getMomentList()
     // 获取标签列表
@@ -41,8 +44,6 @@ const page = Page({
   /* ----------------------------------页面事件---------------------------------- */
   /* 跳转详情 */
   toDetail(res) {
-    console.log('点击')
-    console.log(res)
     const { item, index } = res.detail
 
     // 保存选择的列表项信息和索引
@@ -75,16 +76,15 @@ const page = Page({
   },
   /* 跳转页面 */
   toUrl(res) {
-    this.fun()
-    // const { url, type } = res.detail
-    // if(type) {
-    //   wx[`${type}`]({
-    //     url: url
-    //   })
-    //   return
-    // }
-    // app.globalData.store[0].selectList = this.data.momentList
-    // navigateTo(url)
+    const { url, type } = res.detail
+    if(type) {
+      wx[`${type}`]({
+        url: url
+      })
+      return
+    }
+    app.globalData.store[0].selectList = this.data.momentList
+    navigateTo(url)
   },
   /* 点击tab */
   onTab(res) {
@@ -130,6 +130,33 @@ const page = Page({
       })  
       this._listenList()
     }, 500)      
+  },
+  /* 获取帖子列表重构版 */
+  async getMomentListApi() {
+    const { size } = this.data
+    const page = ++this.data.page
+    const params = {
+      page,
+      size
+    }
+    const result = await API.getMomentList(params)
+    console.log(result)
+  },
+  /* 获取标签列表重构版 */
+  async getLabelListApi() {
+    const { id } = wx.getStorageSync('userInfo')
+    const { size } = this.data
+    const page = 1
+    let params = {
+      page,
+      size
+    }
+    // 如果用户有登录，添加用户id获取用户关注的标签
+    if(id) {
+      params.id = id
+    }
+    const result = await API.getLabelList(params)
+    console.log(result)
   },
   /* 获取标签列表 */
   async getLabelList(isRefresh = false) {
@@ -211,5 +238,3 @@ const page = Page({
     }
   }
 })
-console.log('页面')
-console.log(page)

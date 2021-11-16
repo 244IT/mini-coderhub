@@ -39,7 +39,6 @@ function request(options, title, openCheck = true) {
 				if(title) {
 					wx.hideLoading()
 				}	
-				console.log(res)
 				// 响应拦截
 				if(openCheck && res.data.status !== '10000') {
 					if(res.data.status === 401) {
