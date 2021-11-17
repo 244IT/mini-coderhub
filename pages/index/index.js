@@ -31,11 +31,15 @@ Page({
   /* ----------------------------------页面生命周期--------------------------------- */
   onLoad() {
     this.getMomentListApi()
+    this.getMomentListApi()
+    this.getMomentListApi()
+    this.getLabelListApi()
+    this.getLabelListApi()
     this.getLabelListApi()
     // 获取帖子列表
-    this.getMomentList()
+    // this.getMomentList()
     // 获取标签列表
-    this.getLabelList()
+    // this.getLabelList()
   },
   onShow() {
     // 监听全局状态

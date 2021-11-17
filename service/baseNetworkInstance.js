@@ -5,10 +5,10 @@ const chhRequest = new ChhRequest({
   timeout,
   baseURL,
   requestInterceptor() {
-    console.log('类请求拦截')
+    console.log('chhRequest请求拦截')
   },
   responseInterceptor() {
-    console.log('类响应拦截')
+    console.log('chhRequest响应拦截')
   }
 })
 
