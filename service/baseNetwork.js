@@ -42,6 +42,7 @@ class ChhRequest{
     const requestInstance = wx.request({
       url: config.baseURL + config.url,
       timeout: config.timeout || 60000,
+      method: config.method || 'GET',
       header: config.header || {},
       data: config.data,
       success(res) {
